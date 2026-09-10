@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emad Ezz Eldin Eid | Data Analyst & Business Intelligence</title>
+  
+  <!-- Inter & Plus Jakarta Sans Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            slate: {
+              850: '#151e2e',
+              900: '#0f172a',
+              950: '#080d1a',
+            },
+            accent: {
+              DEFAULT: '#2563eb', // Executive Blue
+              teal: '#0d9488',    // Data Teal
+              indigo: '#4f46e5',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom scrollbar for modal and code previews */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #475569;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-950 text-slate-200 font-sans antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- ======================== NAVIGATION ======================== -->
+  <header class="fixed top-0 left-0 w-full z-40 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#" class="font-heading font-bold text-xl tracking-tight text-white flex items-center gap-2">
+        <span class="p-1.5 bg-blue-600/20 text-blue-400 border border-blue-500/30 rounded-lg">
+          <i data-lucide="bar-chart-2" class="w-5 h-5"></i>
+        </span>
+        <span>Emad<span class="text-blue-500">.BI</span></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-400">
+        <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+        <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
+        <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
+        <a href="#experience" class="hover:text-blue-400 transition-colors">Experience</a>
+        <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+      </nav>
+
+      <div class="hidden md:flex items-center">
+        <a href="#contact" class="px-5 py-2.5 rounded-lg text-sm font-medium bg-blue-600 hover:bg-blue-500 text-white transition-all shadow-sm shadow-blue-500/20">
+          Get in Touch
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button id="mobileMenuBtn" class="md:hidden text-slate-400 hover:text-white" aria-label="Toggle menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden border-b border-slate-800 bg-slate-900/95 px-6 py-5 space-y-4">
+      <a href="#about" class="block text-slate-300 hover:text-blue-400 mobile-link">About</a>
+      <a href="#skills" class="block text-slate-300 hover:text-blue-400 mobile-link">Skills</a>
+      <a href="#projects" class="block text-slate-300 hover:text-blue-400 mobile-link">Projects</a>
+      <a href="#experience" class="block text-slate-300 hover:text-blue-400 mobile-link">Experience</a>
+      <a href="#contact" class="block text-slate-300 hover:text-blue-400 mobile-link">Contact</a>
+    </div>
+  </header>
+
+  <main class="pt-20">
+    <!-- ======================== 1. HERO SECTION ======================== -->
+    <section class="relative min-h-[90vh] flex items-center justify-center px-6 py-20 overflow-hidden">
+      <!-- Subtle Background Grid/Glow -->
+      <div class="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:24px_24px] opacity-40 -z-10"></div>
+      <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[650px] h-[350px] bg-blue-600/10 blur-[130px] rounded-full -z-10"></div>
+
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-blue-500/20 bg-blue-500/10 text-blue-400 text-xs font-semibold tracking-wide uppercase mb-8">
+          <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+          Available for Analytics & BI Opportunities
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-heading font-extrabold text-white tracking-tight leading-[1.15] mb-6">
+          Emad Ezz Eldin Eid
+        </h1>
+
+        <p class="text-lg sm:text-2xl font-medium text-slate-300 mb-6">
+          Data Analyst <span class="text-blue-500 px-2 font-light">|</span> Business Intelligence
+        </p>
+
+        <p class="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+          &ldquo;Turning Data into Insights and Business Decisions.&rdquo;
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#projects" class="w-full sm:w-auto px-7 py-3.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition-all shadow-lg shadow-blue-600/25 flex items-center justify-center gap-2">
+            View My Projects
+            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+          </a>
+          <a href="#contact" class="w-full sm:w-auto px-7 py-3.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-medium text-sm transition-all flex items-center justify-center gap-2">
+            Contact Me
+            <i data-lucide="mail" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Quick Metrics bar -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-20 pt-10 border-t border-slate-800/80">
+          <div class="text-left p-3">
+            <p class="text-2xl font-bold font-heading text-white">100%</p>
+            <p class="text-xs text-slate-400 mt-1">Data-Driven Approach</p>
+          </div>
+          <div class="text-left p-3">
+            <p class="text-2xl font-bold font-heading text-white">SQL & DAX</p>
+            <p class="text-xs text-slate-400 mt-1">Advanced Modeling</p>
+          </div>
+          <div class="text-left p-3">
+            <p class="text-2xl font-bold font-heading text-white">KPI Focused</p>
+            <p class="text-xs text-slate-400 mt-1">Executive Reporting</p>
+          </div>
+          <div class="text-left p-3">
+            <p class="text-2xl font-bold font-heading text-white">Python</p>
+            <p class="text-xs text-slate-400 mt-1">EDA & Automated ETL</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== 2. ABOUT ME ======================== -->
+    <section id="about" class="py-24 px-6 border-t border-slate-800/80 bg-slate-900/30">
+      <div class="max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-12 gap-12 items-center">
+          <div class="md:col-span-4">
+            <div class="relative mx-auto w-48 h-48 md:w-56 md:h-56 rounded-2xl bg-gradient-to-tr from-blue-600/30 via-slate-800 to-slate-900 p-1 border border-slate-700 shadow-xl">
+              <div class="w-full h-full rounded-[14px] bg-slate-900 flex items-center justify-center overflow-hidden">
+                <i data-lucide="user-check" class="w-20 h-20 text-blue-400 stroke-1"></i>
+              </div>
+            </div>
+          </div>
+          <div class="md:col-span-8">
+            <h2 class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-2">Professional Summary</h2>
+            <h3 class="text-2xl md:text-3xl font-heading font-bold text-white mb-6">Bridging Complex Datasets with Strategic Decision-Making</h3>
+            
+            <p class="text-slate-300 leading-relaxed mb-4">
+              I am a results-driven Data Analyst with a rigorous analytical mindset, dedicated to transforming unstructured, complex datasets into intuitive executive reporting systems. My background spans business information systems, database design, and end-to-end business intelligence pipelines.
+            </p>
+            <p class="text-slate-400 leading-relaxed mb-6">
+              With deep expertise in SQL data cleaning, advanced DAX modeling in Power BI, and Python exploratory analysis, I help leadership teams isolate root causes, monitor vital operational KPIs, and execute strategic decisions backed by reliable evidence.
+            </p>
+
+            <div class="flex flex-wrap gap-6 text-sm text-slate-300">
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-teal-400"></i>
+                <span>Decision-Oriented BI</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-teal-400"></i>
+                <span>Data Quality & Cleansing</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-teal-400"></i>
+                <span>KPI Engineering</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== 3. SKILLS ======================== -->
+    <section id="skills" class="py-24 px-6 border-t border-slate-800/80">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center max-w-xl mx-auto mb-16">
+          <h2 class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-2">Technical Competence</h2>
+          <h3 class="text-2xl md:text-3xl font-heading font-bold text-white">Analytical Toolkit & Methodologies</h3>
+          <p class="text-slate-400 text-sm mt-3">Curated technical stack prioritized for corporate reporting, data pipelines, and quantitative insights.</p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          
+          <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800/90 hover:border-blue-500/40 hover:bg-slate-850 transition-all duration-300">
+            <div class="w-10 h-10 rounded-lg bg-yellow-500/10 text-yellow-400 flex items-center justify-center mb-3">
+              <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-semibold text-white text-base">Power BI</h4>
+            <p class="text-xs text-slate-400 mt-1">DAX, Data Modeling, Star Schemas, Power Query</p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800/90 hover:border-blue-500/40 hover:bg-slate-850 transition-all duration-300">
+            <div class="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center mb-3">
+              <i data-lucide="database" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-semibold text-white text-base">SQL</h4>
+            <p class="text-xs text-slate-400 mt-1">Complex Joins, CTEs, Window Functions, DDL/DML</p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800/90 hover:border-blue-500/40 hover:bg-slate-850 transition-all duration-300">
+            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-3">
+              <i data-lucide="sheet" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-semibold text-white text-base">Excel</h4>
+            <p class="text-xs text-slate-400 mt-1">Power Pivot, Advanced Formulas, Dynamic Dashboards</p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800/90 hover:border-blue-500/40 hover:bg-slate-850 transition-all duration-300">
+            <div class="w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-3">
+              <i data-lucide="terminal" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-semibold text-white text-base">Python</h4>
+            <p class="text-xs text-slate-400 mt-1">Data cleaning scripts, exploratory pipelines & automation</p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800/90 hover:border-blue-500/40 hover:bg-slate-850 transition-all duration-300">
+            <div class="w-10 h-10 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center mb-3">
+              <i data-lucide="layers" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-semibold text-white text-base">Pandas</h4>
+            <p class="text-xs text-slate-400 mt-1">DataFrame transformations, masking, profiling</p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800/90 hover:border-blue-500/40 hover:bg-slate-850 transition-all duration-300">
+            <div class="w-10 h-10 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center mb-3">
+              <i data-lucide="binary" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-semibold text-white text-base">NumPy</h4>
+            <p class="text-xs text-slate-400 mt-1">Vectorized operations, quantitative calculations</p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800/90 hover:border-blue-500/40 hover:bg-slate-850 transition-all duration-300">
+            <div class="w-10 h-10 rounded-lg bg-teal-500/10 text-teal-400 flex items-center justify-center mb-3">
+              <i data-lucide="pie-chart" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-semibold text-white text-base">Tableau</h4>
+            <p class="text-xs text-slate-400 mt-1">Interactive dashboards, dual-axis charts, story points</p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800/90 hover:border-blue-500/40 hover:bg-slate-850 transition-all duration-300">
+            <div class="w-10 h-10 rounded-lg bg-rose-500/10 text-rose-400 flex items-center justify-center mb-3">
+              <i data-lucide="sparkles" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-semibold text-white text-base">Data Cleaning</h4>
+            <p class="text-xs text-slate-400 mt-1">Anomaly isolation, deduplication, imputation rules</p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800/90 hover:border-blue-500/40 hover:bg-slate-850 transition-all duration-300">
+            <div class="w-10 h-10 rounded-lg bg-violet-500/10 text-violet-400 flex items-center justify-center mb-3">
+              <i data-lucide="line-chart" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-semibold text-white text-base">Data Visualization</h4>
+            <p class="text-xs text-slate-400 mt-1">Visual hierarchy, color theory, cognitive ergonomics</p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800/90 hover:border-blue-500/40 hover:bg-slate-850 transition-all duration-300">
+            <div class="w-10 h-10 rounded-lg bg-blue-600/10 text-blue-400 flex items-center justify-center mb-3">
+              <i data-lucide="briefcase" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-semibold text-white text-base">Business Intelligence</h4>
+            <p class="text-xs text-slate-400 mt-1">Metric definition, cross-functional alignment, KPI maps</p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800/90 hover:border-blue-500/40 hover:bg-slate-850 transition-all duration-300 col-span-2 sm:col-span-1 lg:col-span-2">
+            <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center mb-3">
+              <i data-lucide="search" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-semibold text-white text-base">Exploratory Data Analysis (EDA)</h4>
+            <p class="text-xs text-slate-400 mt-1">Correlation analysis, variance testing, distribution curves, pattern validation</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== 4. FEATURED PROJECTS ======================== -->
+    <section id="projects" class="py-24 px-6 border-t border-slate-800/80 bg-slate-900/20">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-14">
+          <div>
+            <h2 class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-2">Portfolio Evidence</h2>
+            <h3 class="text-2xl md:text-3xl font-heading font-bold text-white">Featured Business Analytics Projects</h3>
+            <p class="text-slate-400 text-sm mt-2">Demonstrating bottom-line business value through rigorous analytics and BI modeling.</p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Card 1 -->
+          <div class="group flex flex-col rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-blue-500/40 transition-all duration-300 overflow-hidden">
+            <div class="h-48 bg-slate-800 relative overflow-hidden flex items-center justify-center border-b border-slate-800">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-10"></div>
+              <div class="p-4 w-full h-full flex flex-col justify-between opacity-70 group-hover:scale-105 transition-transform duration-500">
+                <div class="flex justify-between items-center text-xs text-slate-400">
+                  <span class="font-mono">PBI_EXECUTIVE_SALES.pbix</span>
+                  <span class="flex gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-400"></span> Live Model</span>
+                </div>
+                <div class="space-y-2">
+                  <div class="h-2 w-3/4 bg-blue-500/40 rounded"></div>
+                  <div class="h-2 w-1/2 bg-slate-600/40 rounded"></div>
+                  <div class="h-2 w-5/6 bg-indigo-500/30 rounded"></div>
+                </div>
+                <div class="flex gap-2">
+                  <span class="text-[10px] bg-slate-800 px-2 py-1 rounded text-slate-300 border border-slate-700">Margin: +14.2%</span>
+                  <span class="text-[10px] bg-slate-800 px-2 py-1 rounded text-slate-300 border border-slate-700">Churn: -3.1%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 flex-1 flex flex-col">
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Power BI</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">DAX</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">SQL</span>
+              </div>
+
+              <h4 class="text-xl font-heading font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                Automotive Sales & Profitability Intelligence Model
+              </h4>
+              
+              <p class="text-slate-400 text-sm mb-4 leading-relaxed line-clamp-2">
+                Executive multi-page Power BI dashboard addressing margin compression across dealership regions and vehicle trim configurations.
+              </p>
+
+              <div class="space-y-2.5 text-xs text-slate-300 mb-6 border-t border-slate-800/80 pt-4 mt-auto">
+                <p><strong class="text-slate-200">Objective:</strong> Isolate high-revenue but margin-negative regional inventory segments.</p>
+                <p><strong class="text-slate-200">Key Insight:</strong> Discovered luxury tier discounts eroded 18% net profits despite steady top-line growth.</p>
+              </div>
+
+              <button onclick="openModal('bmw-sales')" class="w-full py-2.5 rounded-lg bg-slate-800 hover:bg-blue-600 text-slate-200 hover:text-white text-xs font-semibold tracking-wide uppercase transition-all flex items-center justify-center gap-2">
+                View Project Details
+                <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="group flex flex-col rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-blue-500/40 transition-all duration-300 overflow-hidden">
+            <div class="h-48 bg-slate-800 relative overflow-hidden flex items-center justify-center border-b border-slate-800">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-10"></div>
+              <div class="p-4 w-full h-full flex flex-col justify-between opacity-70 group-hover:scale-105 transition-transform duration-500">
+                <div class="flex justify-between items-center text-xs text-slate-400">
+                  <span class="font-mono">SQL_QUERY_PIPELINE.sql</span>
+                  <span class="flex gap-1.5"><span class="w-2 h-2 rounded-full bg-blue-400"></span> 1.2M Records</span>
+                </div>
+                <div class="space-y-2 font-mono text-[10px] text-slate-400">
+                  <p class="text-blue-300">SELECT category_id, AVG(discount)</p>
+                  <p class="text-slate-500">FROM hardware_transactions</p>
+                  <p class="text-slate-500">GROUP BY 1 HAVING COUNT(*) > 500;</p>
+                </div>
+                <div class="flex gap-2">
+                  <span class="text-[10px] bg-slate-800 px-2 py-1 rounded text-slate-300 border border-slate-700">Deduplicated: 99.8%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 flex-1 flex flex-col">
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">SQL Engine</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Data Cleaning</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">PostgreSQL</span>
+              </div>
+
+              <h4 class="text-xl font-heading font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                Hardware Retail Cleansing & Predictive Stock Pipeline
+              </h4>
+              
+              <p class="text-slate-400 text-sm mb-4 leading-relaxed line-clamp-2">
+                End-to-end data audit and transformation on 1.2M hardware sales transactions, repairing null anomalies and identifying stock outfalls.
+              </p>
+
+              <div class="space-y-2.5 text-xs text-slate-300 mb-6 border-t border-slate-800/80 pt-4 mt-auto">
+                <p><strong class="text-slate-200">Objective:</strong> Normalize multi-store transaction dumps and eliminate reporting discrepancies.</p>
+                <p><strong class="text-slate-200">Key Insight:</strong> Found duplicate SKUs responsible for $42,000 in phantom inventory across ERP records.</p>
+              </div>
+
+              <button onclick="openModal('hardware-cleaning')" class="w-full py-2.5 rounded-lg bg-slate-800 hover:bg-blue-600 text-slate-200 hover:text-white text-xs font-semibold tracking-wide uppercase transition-all flex items-center justify-center gap-2">
+                View Project Details
+                <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="group flex flex-col rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-blue-500/40 transition-all duration-300 overflow-hidden">
+            <div class="h-48 bg-slate-800 relative overflow-hidden flex items-center justify-center border-b border-slate-800">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-10"></div>
+              <div class="p-4 w-full h-full flex flex-col justify-between opacity-70 group-hover:scale-105 transition-transform duration-500">
+                <div class="flex justify-between items-center text-xs text-slate-400">
+                  <span class="font-mono">EXCEL_MODEL_PIVOT.xlsx</span>
+                  <span class="flex gap-1.5"><span class="w-2 h-2 rounded-full bg-yellow-400"></span> Omnichannel</span>
+                </div>
+                <div class="grid grid-cols-3 gap-1 h-12 items-end">
+                  <div class="h-6 bg-teal-500/40 rounded-t"></div>
+                  <div class="h-10 bg-blue-500/60 rounded-t"></div>
+                  <div class="h-8 bg-indigo-500/50 rounded-t"></div>
+                </div>
+                <div class="flex gap-2">
+                  <span class="text-[10px] bg-slate-800 px-2 py-1 rounded text-slate-300 border border-slate-700">Direct-to-Consumer</span>
+                  <span class="text-[10px] bg-slate-800 px-2 py-1 rounded text-slate-300 border border-slate-700">Wholesale</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 flex-1 flex flex-col">
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-teal-500/10 text-teal-400 border border-teal-500/20">Excel</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-teal-500/10 text-teal-400 border border-teal-500/20">Power Query</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-teal-500/10 text-teal-400 border border-teal-500/20">Omnichannel</span>
+              </div>
+
+              <h4 class="text-xl font-heading font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                Omnichannel Retail Distribution & Revenue Performance
+              </h4>
+              
+              <p class="text-slate-400 text-sm mb-4 leading-relaxed line-clamp-2">
+                Dynamic Excel financial dashboard modeling apparel and footwear sales across retail, online, and outlet distribution channels.
+              </p>
+
+              <div class="space-y-2.5 text-xs text-slate-300 mb-6 border-t border-slate-800/80 pt-4 mt-auto">
+                <p><strong class="text-slate-200">Objective:</strong> Analyze margin variance between direct-to-consumer (D2C) and 3rd party wholesale.</p>
+                <p><strong class="text-slate-200">Key Insight:</strong> Digital D2C channels generated 28% higher margin despite 15% elevated customer acquisition costs.</p>
+              </div>
+
+              <button onclick="openModal('retail-performance')" class="w-full py-2.5 rounded-lg bg-slate-800 hover:bg-blue-600 text-slate-200 hover:text-white text-xs font-semibold tracking-wide uppercase transition-all flex items-center justify-center gap-2">
+                View Project Details
+                <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== 5. EXPERIENCE & CERTIFICATIONS ======================== -->
+    <section id="experience" class="py-24 px-6 border-t border-slate-800/80">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-16">
+          
+          <!-- Experience Column -->
+          <div>
+            <div class="flex items-center gap-3 mb-8">
+              <span class="p-2 rounded-lg bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                <i data-lucide="briefcase" class="w-5 h-5"></i>
+              </span>
+              <h3 class="text-2xl font-heading font-bold text-white">Experience & Internships</h3>
+            </div>
+
+            <div class="relative border-l border-slate-800 ml-4 pl-6 space-y-10">
+              
+              <div class="relative group">
+                <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-blue-500 border-4 border-slate-950"></span>
+                <span class="text-xs font-mono text-blue-400 font-semibold uppercase tracking-wider">Summer Internship</span>
+                <h4 class="text-lg font-bold text-white mt-1">Commercial International Bank (CIB)</h4>
+                <p class="text-xs text-slate-400 mb-3">Branch Operations & Financial Services Division</p>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                  Observed operational workflows, assisted with financial transaction documentation verification, and analyzed branch customer lifecycle patterns to report on service bottlenecks.
+                </p>
+              </div>
+
+              <div class="relative group">
+                <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-slate-700 border-4 border-slate-950"></span>
+                <span class="text-xs font-mono text-blue-400 font-semibold uppercase tracking-wider">Training Program</span>
+                <h4 class="text-lg font-bold text-white mt-1">National Telecommunication Institute (NTI)</h4>
+                <p class="text-xs text-slate-400 mb-3">Intensive Freelance & Data Analytics Track</p>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                  Completed end-to-end hands-on training covering relational databases, professional data sanitization, client discovery protocols, and executive dashboard delivery.
+                </p>
+              </div>
+
+              <div class="relative group">
+                <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-slate-700 border-4 border-slate-950"></span>
+                <span class="text-xs font-mono text-blue-400 font-semibold uppercase tracking-wider">Academic Background</span>
+                <h4 class="text-lg font-bold text-white mt-1">B.Sc. in Business Information Systems</h4>
+                <p class="text-xs text-slate-400 mb-3">Major: Business Information & Digital Transformation</p>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                  Core coursework: Relational Database Management Systems (RDBMS), Data Structures, Systems Analysis & Design, Financial Accounting, and Statistical Methods.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Certifications & Programs Column -->
+          <div>
+            <div class="flex items-center gap-3 mb-8">
+              <span class="p-2 rounded-lg bg-teal-500/10 text-teal-400 border border-teal-500/20">
+                <i data-lucide="award" class="w-5 h-5"></i>
+              </span>
+              <h3 class="text-2xl font-heading font-bold text-white">Certifications & Leadership</h3>
+            </div>
+
+            <div class="space-y-4">
+              
+              <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800 flex items-start justify-between gap-4">
+                <div>
+                  <h4 class="text-base font-semibold text-white">Data Analytics Professional Certification</h4>
+                  <p class="text-xs text-slate-400 mt-1">Specialization in SQL, Tableau, R & Data Cleansing Frameworks</p>
+                  <span class="inline-block mt-2 text-[11px] font-mono text-blue-400 bg-blue-950/50 px-2 py-0.5 rounded border border-blue-800/40">Verified Credential</span>
+                </div>
+                <i data-lucide="badge-check" class="w-5 h-5 text-blue-400 shrink-0 mt-1"></i>
+              </div>
+
+              <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800 flex items-start justify-between gap-4">
+                <div>
+                  <h4 class="text-base font-semibold text-white">Power BI Data Analyst Associate</h4>
+                  <p class="text-xs text-slate-400 mt-1">Advanced DAX, Star Schema Data Modeling, RLS, & Power BI Service Administration</p>
+                  <span class="inline-block mt-2 text-[11px] font-mono text-blue-400 bg-blue-950/50 px-2 py-0.5 rounded border border-blue-800/40">Business Intelligence</span>
+                </div>
+                <i data-lucide="badge-check" class="w-5 h-5 text-blue-400 shrink-0 mt-1"></i>
+              </div>
+
+              <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800 flex items-start justify-between gap-4">
+                <div>
+                  <h4 class="text-base font-semibold text-white">MINT Ambassadors Program & NASA Space Apps</h4>
+                  <p class="text-xs text-slate-400 mt-1">Workshops in collaborative problem-solving, product pitch design, and hackathon data modeling</p>
+                  <span class="inline-block mt-2 text-[11px] font-mono text-teal-400 bg-teal-950/50 px-2 py-0.5 rounded border border-teal-800/40">Leadership & Workshops</span>
+                </div>
+                <i data-lucide="users" class="w-5 h-5 text-teal-400 shrink-0 mt-1"></i>
+              </div>
+
+              <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800 flex items-start justify-between gap-4">
+                <div>
+                  <h4 class="text-base font-semibold text-white">Professional English Communication (AUC)</h4>
+                  <p class="text-xs text-slate-400 mt-1">The American University in Cairo (AUC) Tahrir Square Campus</p>
+                  <span class="inline-block mt-2 text-[11px] font-mono text-slate-300 bg-slate-800 px-2 py-0.5 rounded">Executive Communication</span>
+                </div>
+                <i data-lucide="globe" class="w-5 h-5 text-slate-400 shrink-0 mt-1"></i>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== 6. CONTACT SECTION ======================== -->
+    <section id="contact" class="py-24 px-6 border-t border-slate-800/80 bg-slate-900/30">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center max-w-xl mx-auto mb-16">
+          <h2 class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-2">Initiate Contact</h2>
+          <h3 class="text-2xl md:text-3xl font-heading font-bold text-white">Let’s Discuss Data Initiatives</h3>
+          <p class="text-slate-400 text-sm mt-3">Whether you need an executive Power BI dashboard, SQL pipeline optimization, or exploratory analysis, I am ready to collaborate.</p>
+        </div>
+
+        <div class="grid md:grid-cols-12 gap-8 items-start">
+          
+          <!-- Contact Info -->
+          <div class="md:col-span-5 space-y-4">
+            <div class="p-5 rounded-xl bg-slate-900 border border-slate-800">
+              <div class="flex items-center gap-3">
+                <span class="p-2.5 rounded-lg bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                  <i data-lucide="mail" class="w-5 h-5"></i>
+                </span>
+                <div>
+                  <p class="text-xs text-slate-400 font-medium">Email Address</p>
+                  <a href="mailto:emadezzelden7@gmail.com" class="text-sm font-semibold text-white hover:text-blue-400 transition-colors">emadezzelden7@gmail.com</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-xl bg-slate-900 border border-slate-800">
+              <div class="flex items-center gap-3">
+                <span class="p-2.5 rounded-lg bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                  <i data-lucide="linkedin" class="w-5 h-5"></i>
+                </span>
+                <div>
+                  <p class="text-xs text-slate-400 font-medium">LinkedIn Profile</p>
+                  <a href="https://linkedin.com" target="_blank" class="text-sm font-semibold text-white hover:text-blue-400 transition-colors">linkedin.com/in/yourprofile</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-xl bg-slate-900 border border-slate-800">
+              <div class="flex items-center gap-3">
+                <span class="p-2.5 rounded-lg bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                  <i data-lucide="github" class="w-5 h-5"></i>
+                </span>
+                <div>
+                  <p class="text-xs text-slate-400 font-medium">GitHub Repository</p>
+                  <a href="https://github.com" target="_blank" class="text-sm font-semibold text-white hover:text-blue-400 transition-colors">github.com/yourhandle</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="md:col-span-7 bg-slate-900 border border-slate-800 rounded-xl p-7">
+            <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+              <div>
+                <label for="name" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Full Name</label>
+                <input type="text" id="name" required placeholder="Jane Doe" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition-colors" />
+              </div>
+
+              <div>
+                <label for="email" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Corporate Email</label>
+                <input type="email" id="email" required placeholder="jane@company.com" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition-colors" />
+              </div>
+
+              <div>
+                <label for="message" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Project Brief / Inquiry</label>
+                <textarea id="message" rows="4" required placeholder="Outline your analytical objective, dataset scope, or BI reporting requirement..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition-colors"></textarea>
+              </div>
+
+              <button type="submit" id="submitBtn" class="w-full py-3.5 px-6 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition-all shadow-md shadow-blue-600/20 flex items-center justify-center gap-2">
+                <span>Send Message</span>
+                <i data-lucide="send" class="w-4 h-4"></i>
+              </button>
+              <div id="formStatus" class="hidden text-center text-xs text-emerald-400 font-medium pt-2">
+                Thank you. Your message has been routed successfully.
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer class="py-8 px-6 border-t border-slate-900 bg-slate-950 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>&copy; 2026 Emad Ezz Eldin Eid. All rights reserved.</p>
+      <p class="flex items-center gap-1 justify-center">
+        Engineered for clarity, performance, and business value.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ======================== 5. PROJECT DETAILS MODAL ======================== -->
+  <div id="projectModal" class="fixed inset-0 z-50 hidden bg-slate-950/85 backdrop-blur-md overflow-y-auto p-4 sm:p-6 md:p-10 flex items-center justify-center">
+    <div class="relative w-full max-w-4xl bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden my-8">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between p-6 border-b border-slate-800 bg-slate-850">
+        <div>
+          <span id="modalCategory" class="text-[11px] font-mono font-semibold uppercase tracking-wider text-blue-400">Project Case Study</span>
+          <h3 id="modalTitle" class="text-xl sm:text-2xl font-heading font-bold text-white mt-1">Project Details</h3>
+        </div>
+        <button onclick="closeModal()" class="text-slate-400 hover:text-white p-2 rounded-lg bg-slate-800/80 hover:bg-slate-700 transition-colors">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body Content -->
+      <div class="p-6 sm:p-8 space-y-8 max-h-[75vh] overflow-y-auto" id="modalContent">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 sm:p-6 border-t border-slate-800 bg-slate-850 flex justify-end">
+        <button onclick="closeModal()" class="px-5 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-sm font-medium text-slate-200 transition-colors">
+          Close Project Brief
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================== SCRIPTS ======================== -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile Navigation Toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Form submission feedback simulation
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const status = document.getElementById('formStatus');
+      const btn = document.getElementById('submitBtn');
+      btn.disabled = true;
+      btn.classList.add('opacity-50');
+      status.classList.remove('hidden');
+      setTimeout(() => {
+        e.target.reset();
+        btn.disabled = false;
+        btn.classList.remove('opacity-50');
+        setTimeout(() => { status.classList.add('hidden'); }, 4000);
+      }, 1000);
+    }
+
+    // Projects Database
+    const projectsData = {
+      'bmw-sales': {
+        title: 'Automotive Sales & Profitability Intelligence Model',
+        category: 'Power BI • DAX • Executive BI',
+        tools: ['Power BI Desktop', 'DAX Studio', 'SQL Server', 'Power Query'],
+        businessProblem: 'Dealership networks experienced steady aggregate revenue increases alongside an inexplicable 4.2% drop in quarterly EBITDA. Management lacked drill-down visibility into vehicle option margins, warranty package attachment rates, and regional discount approvals.',
+        dataset: '58,000+ sales transactions across 18 regional dealerships covering vehicle trims, options packages, trade-in valuations, and dealer financing margins.',
+        cleaning: 'Cleaned trailing whitespace across VIN and trim catalogs using Power Query M scripts. Handled null values in financing commission tiers, created unified date dimensions, and normalized regional dealership keys into a 3NF Star Schema.',
+        analysis: 'Formulated 25+ dynamic DAX measures including Time-Intelligence (YTD, YoY), Margin Variance %, and Price-Volume-Mix (PVM) decomposition. Modeled custom user role-level security (RLS) for dealership regional heads.',
+        findings: [
+          'Heavy promotional discounting on high-volume sedan trims completely offset profit contributions.',
+          'Two specific metro dealerships accounted for 64% of all sub-margin approvals due to unauthorized manager waivers.',
+          'Electric & Hybrid vehicle inventory exhibited a 34-day higher floor duration, incurring excessive holding interest.'
+        ],
+        recommendations: [
+          'Impose automated hard thresholds on manager discretionary discounts in the ERP.',
+          'Shift promotional marketing budgets from low-margin entry sedans to high-margin accessory package bundles.',
+          'Rebalance regional inventory allocation based on localized floor turn velocity.'
+        ],
+        dashboardMockup: `
+          <div class="rounded-xl border border-slate-800 bg-slate-950 p-4 font-mono text-xs">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-800 mb-4">
+              <span class="text-blue-400 font-semibold">[EXECUTIVE DASHBOARD VIEWPORT]</span>
+              <span class="text-slate-500">Filter: CY2025-2026 | All Territories</span>
+            </div>
+            <div class="grid grid-cols-3 gap-3 mb-4">
+              <div class="bg-slate-900 p-3 rounded border border-slate-800">
+                <div class="text-slate-400 text-[10px]">TOTAL REVENUE</div>
+                <div class="text-lg font-bold text-white mt-0.5">$48.2M</div>
+                <div class="text-[10px] text-emerald-400">+8.4% YoY</div>
+              </div>
+              <div class="bg-slate-900 p-3 rounded border border-slate-800">
+                <div class="text-slate-400 text-[10px]">NET PROFIT MARGIN</div>
+                <div class="text-lg font-bold text-white mt-0.5">9.1%</div>
+                <div class="text-[10px] text-rose-400">-1.8% vs Target</div>
+              </div>
+              <div class="bg-slate-900 p-3 rounded border border-slate-800">
+                <div class="text-slate-400 text-[10px]">UNIT DISCOUNTS AVG</div>
+                <div class="text-lg font-bold text-white mt-0.5">$2,840</div>
+                <div class="text-[10px] text-amber-400">+22% over limit</div>
+              </div>
+            </div>
+            <div class="h-32 bg-slate-900 rounded border border-slate-800 flex items-center justify-center text-slate-500 text-xs">
+              [Power BI Multi-Page Interactive Chart Canvas Placeholder]
+            </div>
+          </div>
+        `
+      },
+      'hardware-cleaning': {
+        title: 'Hardware Retail Cleansing & Predictive Stock Pipeline',
+        category: 'SQL Engineering • PostgreSQL • Data Quality',
+        tools: ['PostgreSQL', 'SQL DDL/DML', 'Data Profiling', 'Window Functions'],
+        businessProblem: 'An omni-channel hardware and electronics distributor reported substantial discrepancies between physical shelf counts and SQL transactional stock counts, driving avoidable stockouts and supplier penalty charges.',
+        dataset: '1.2 million line-item records covering multi-store POS registers, supplier shipments, return authorizations, and transit shrinkage.',
+        cleaning: 'Executed systematic deduplication scripts using CTEs and ROW_NUMBER() partitioning. Handled missing SKU lookups via conditional CASE logic. Standardized international currency conversion fluctuations at point-of-sale timestamps.',
+        analysis: 'Applied window functions (SUM() OVER (...), LEAD/LAG) to reconstruct warehouse inventory replenishment curves and isolate inventory leakage nodes.',
+        findings: [
+          'Found 14,200 orphan records originating from interrupted POS offline syncs during peak holiday foot traffic.',
+          'A single supplier SKU prefix held multiple naming variants, obscuring actual replenishment order quantities.',
+          'Shrinkage concentrated 72% within 3 specific warehouse cross-dock distribution hubs.'
+        ],
+        recommendations: [
+          'Enforce foreign key integrity constraints at the POS sync gateway to reject malformed records.',
+          'Institute automated nightly SQL reconciliation jobs to trigger instant alerts upon inventory balance divergence.',
+          'Revise physical inventory audit intervals at top 3 risk cross-dock facilities from quarterly to bi-weekly.'
+        ],
+        dashboardMockup: `
+          <div class="rounded-xl border border-slate-800 bg-slate-950 p-4 font-mono text-xs text-slate-300">
+            <div class="text-blue-400 pb-2 mb-3 border-b border-slate-800">SQL AUDIT SUMMARY REPORT</div>
+            <pre class="overflow-x-auto text-[11px] leading-relaxed text-slate-400">
+WITH DuplicateScan AS (
+  SELECT transaction_id, sku, store_id,
+         ROW_NUMBER() OVER(PARTITION BY transaction_id, sku ORDER BY timestamp DESC) as row_num
+  FROM raw_hardware_sales
+)
+DELETE FROM raw_hardware_sales 
+WHERE transaction_id IN (SELECT transaction_id FROM DuplicateScan WHERE row_num > 1);
+-- 14,210 malformed duplicates purged.
+            </pre>
+          </div>
+        `
+      },
+      'retail-performance': {
+        title: 'Omnichannel Retail Distribution & Revenue Performance',
+        category: 'Excel Model • Power Query • Financial Metrics',
+        tools: ['Microsoft Excel (Power Pivot)', 'Power Query', 'DAX Measures', 'Advanced Modeling'],
+        businessProblem: 'Merchandising leadership lacked visibility into operational profitability across sales channels (Direct-to-Consumer e-commerce vs. brick-and-mortar retail outlets vs. 3rd-party wholesale partners).',
+        dataset: 'Multi-year transactional dataset spanning 240,000 product unit orders across 5 geographic territories and 4 distinct merchandise categories.',
+        cleaning: 'Loaded disparate CSV files via Power Query. Normalized return reasons, unpivoted seasonal promotion matrices, and handled currency conversions into unified USD baseline.',
+        analysis: 'Created multi-tab dynamic dashboard leveraging Excel Power Pivot and data modeling. Engineered calculated columns for Contribution Margin II and Return On Ad Spend (ROAS).',
+        findings: [
+          'Direct-to-consumer online store commanded a 28% higher gross margin, but return freight logistics eroded 9% of its net benefit.',
+          'Wholesale accounts suffered prolonged Days Sales Outstanding (DSO) averaging 74 days versus 2 days for e-commerce.',
+          'Footwear category generated 58% of aggregate dollar volume while occupying only 31% of warehouse shelf footprint.'
+        ],
+        recommendations: [
+          'Introduce customer-paid return policies on deeply discounted online clearance items.',
+          'Incentivize wholesale partners with a 2% discount for payments settled within 20 calendar days.',
+          'Reallocate floor footprint toward footwear lines to capitalize on high inventory turns.'
+        ],
+        dashboardMockup: `
+          <div class="rounded-xl border border-slate-800 bg-slate-950 p-4 font-mono text-xs">
+            <div class="flex justify-between items-center pb-2 border-b border-slate-800 text-slate-400 mb-3">
+              <span class="text-teal-400 font-semibold">CHANNEL CONTRIBUTION MATRIX</span>
+              <span>Model: Dynamic Pivot / Slicers Active</span>
+            </div>
+            <div class="grid grid-cols-2 gap-3 text-[11px]">
+              <div class="p-2.5 rounded bg-slate-900 border border-slate-800">
+                <span class="text-slate-400">D2C Online Channel</span>
+                <p class="text-white font-bold text-sm mt-1">CM: 38.4% | ROAS: 3.4x</p>
+              </div>
+              <div class="p-2.5 rounded bg-slate-900 border border-slate-800">
+                <span class="text-slate-400">Wholesale Channel</span>
+                <p class="text-white font-bold text-sm mt-1">CM: 22.1% | DSO: 74 Days</p>
+              </div>
+            </div>
+          </div>
+        `
+      }
+    };
+
+    // Modal Operations
+    const modal = document.getElementById('projectModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalCategory = document.getElementById('modalCategory');
+    const modalContent = document.getElementById('modalContent');
+
+    function openModal(projectId) {
+      const p = projectsData[projectId];
+      if (!p) return;
+
+      modalCategory.innerText = p.category;
+      modalTitle.innerText = p.title;
+
+      modalContent.innerHTML = `
+        <!-- Tools Badges -->
+        <div class="flex flex-wrap gap-2">
+          ${p.tools.map(tool => `<span class="text-xs px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/20 font-medium">${tool}</span>`).join('')}
+        </div>
+
+        <!-- Visual / Dashboard Component -->
+        <div>
+          <h4 class="text-xs uppercase tracking-wider font-semibold text-slate-400 mb-2">Executive Dashboard / Architecture Preview</h4>
+          ${p.dashboardMockup}
+        </div>
+
+        <!-- Business Context Grid -->
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="p-4 rounded-xl bg-slate-950 border border-slate-800">
+            <h5 class="text-xs font-semibold uppercase tracking-wider text-rose-400 mb-2">The Business Problem</h5>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">${p.businessProblem}</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-950 border border-slate-800">
+            <h5 class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-2">Dataset Scope</h5>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">${p.dataset}</p>
+          </div>
+        </div>
+
+        <!-- Methodology -->
+        <div class="space-y-4">
+          <div>
+            <h5 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1">Data Cleaning & Preparation</h5>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">${p.cleaning}</p>
+          </div>
+          <div>
+            <h5 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1">Analytical Execution</h5>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">${p.analysis}</p>
+          </div>
+        </div>
+
+        <!-- Findings & Recommendations -->
+        <div class="grid md:grid-cols-2 gap-6 pt-4 border-t border-slate-800">
+          <div>
+            <h5 class="text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-3 flex items-center gap-1.5">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i> Key Findings
+            </h5>
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-300 list-disc list-inside">
+              ${p.findings.map(f => `<li class="leading-relaxed">${f}</li>`).join('')}
+            </ul>
+          </div>
+          <div>
+            <h5 class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3 flex items-center gap-1.5">
+              <i data-lucide="trending-up" class="w-4 h-4"></i> Business Recommendations
+            </h5>
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-300 list-disc list-inside">
+              ${p.recommendations.map(r => `<li class="leading-relaxed">${r}</li>`).join('')}
+            </ul>
+          </div>
+        </div>
+      `;
+
+      modal.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+      lucide.createIcons();
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    // Close modal on escape or background click
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+  </script>
+</body>
+</html>
