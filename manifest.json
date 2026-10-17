@@ -1,13 +1,27 @@
 {
+  "short_name": "ATLAS",
+  "name": "ATLAS",
+  "id": "atlas-app",
+  "description": "Domestic Worker Platform",
+  "icons": [
+    {
+      "src": "/icon.png.jpeg",
+      "type": "image/jpeg",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon.png.jpeg",
+      "type": "image/jpeg",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
   "background_color": "#ffffff",
+  "theme_color": "#ffffff",
   "dir": "ltr",
   "display": "standalone",
-  "name": "ATLAS",
   "orientation": "any",
-  "scope": "/",
-  "short_name": "ATLAS",
-  "start_url": "/",
-  "theme_color": "#ffffff",
-  "description": "Domestic Worker Platform",
-  "id": "atlas-app"
+  "scope": "/"
 }
